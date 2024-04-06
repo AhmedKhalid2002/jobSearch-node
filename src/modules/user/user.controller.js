@@ -37,7 +37,7 @@ export const signup=asyncHandler(async(req,res,next)=>{
     const sendMessage=await sendEmail({
         to:createUser.email,
         subject:"Account Activation",
-        html:`<a href="http://localhost:3000/user/activate_acount/${token}">Activite your Account</a>`
+        html:`<a href="https://job-search-node.vercel.app/user/activate_acount/${token}">Activite your Account</a>`
     })
 
     if(!sendMessage)
